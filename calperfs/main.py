@@ -59,6 +59,8 @@ class Show(ndb.Model):
     note = ndb.StringProperty()
 
 class Schedule(ndb.Model):
+    month  = ndb.IntegerProperty()
+    year  = ndb.IntegerProperty()
     shows = ndb.JsonProperty(repeated=True)
 
 class HomeHandler(webapp2.RequestHandler):
@@ -75,7 +77,7 @@ class EditHandler(webapp2.RequestHandler):
 class CreateHandler(webapp2.RequestHandler):
 	def get(self):
 		now = datetime.datetime.now()
-		template_values = {'year':now.year}
+		template_values = {'year':now.year,'yearOne':str(now.year),'yearTwo':str(now.year+1)}
 		template = jinja_environment.get_template('create.html')
 		self.response.out.write(template.render(template_values))
 class AddHandler(webapp2.RequestHandler):
@@ -123,6 +125,19 @@ class ScheduleNewHandler(webapp2.RequestHandler):
 		template_values = {}
 		template = jinja_environment.get_template('scheduleNew.html')
 		self.response.out.write(template.render(template_values))
+	def post(self):
+		s=Schedule()
+		month=int(self.request.get('month'))
+		year=int(self.request.get('chosenYear'))
+		newShows=[]
+		newStudents=[]
+		s.shows= schedule(newShows, newStudents, dayOne(1,month,year))
+		s.month=month
+		s.year=year
+		s.put()
+		template_values = {}
+		template = jinja_environment.get_template('scheduleNew.html')
+		self.response.out.write(template.render(template_values))
 class AvailabilityHandler(webapp2.RequestHandler):
 	def get(self):
 		now = datetime.datetime.now()
@@ -148,6 +163,13 @@ class ShowsHandler(webapp2.RequestHandler):
 		template_values = {}
 		template = jinja_environment.get_template('shows.html')
 		self.response.out.write(template.render(template_values))
+##temporary
+def schedule (shows, students, dayOne):
+	return [{'available': [[], [], []], 'start': 14, 'numberOfStaff': {'AHM': 1, 'Usher': 5, 'HM': 1}, 'scheduled': [[{'name': 'Max Vale', 'max': 'HM', 'except': [[30, 8, 15], [1, 17, 18]], 'not': [7, 28], 'weekly': {'Monday': [[16, 20]], 'Tuesday': [], 'Friday': [[10, 18]], 'Wednesday': [], 'Thursday': [], 'Sunday': [[5, 4]], 'Saturday': []}, 'shows': [1, 0, 0]}], [{'name': 'Jessica Allen', 'max': 'AHM', 'except': [[5, 7, 16], [30, 8, 15], [1, 17, 18]], 'not': [7, 28], 'weekly': {'Monday': [[10, 12], [16, 20]], 'Tuesday': [], 'Friday': [[10, 18]], 'Wednesday': [], 'Thursday': [], 'Sunday': [], 'Saturday': []}, 'shows': [0, 1, 0]}], []], 'location': 'Zellerbach Auditorium', 'show': 'Test', 'date': 1, 'time': {'AHM': [17, 18], 'Usher': [17, 18], 'HM': [17, 18]}, 'FOH Lead': 'Rob Bean'}, {'available': [[], [], []], 'start': 15, 'numberOfStaff': {'AHM': 1, 'Usher': 5, 'HM': 1}, 'scheduled': [[], [], []], 'location': 'Zellerbach Playhouse', 'show': 'Test2', 'date': 6, 'time': {'AHM': [12, 16], 'Usher': [12, 16], 'HM': [12, 16]}, 'FOH Lead': 'Patrick Hennessey'}]
+##temporary
+def dayOne(day, month, year):
+	return 'Monday'
+
 app = webapp2.WSGIApplication([('/shows', ShowsHandler),
 				('/availability', AvailabilityHandler),
 				('/schedule', ScheduleHandler),

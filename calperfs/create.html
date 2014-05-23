@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      CalPerfs Create Schedule
+    </title>
+    <style>
+     .a{border: 4px black solid;
+        width:200px;}
+     #e{float:right;}
+    </style>
+  </head>
+  <body>
+    <h1>Create Schedule</h1>
+    <p id='e'>{{email}}
+    </p>
+    <form action="/scheduleNew" method="get">
+    	Please Select the month and year for the schedule you would like to create
+    	<select>
+    		<option value=1>January</option>
+    		<option value=2>February</option>
+    		<option value=3>March</option>
+    		<option value=4>April</option>
+    		<option value=5>May</option>
+    		<option value=6>June</option>
+    		<option value=7>July</option>
+    		<option value=8>August</option>
+    		<option value=9>September</option>
+    		<option value=10>October</option>
+    		<option value=11>November</option>
+    		<option value=12>December</option>
+    	</select>
+    	<select>
+    		<option value2=year>{{year}}</option>
+    		<option value2=year+1>{{year+1}}</option>
+    	</select>
+    	Password: <input type="password" password="password"><br>
+    	<input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

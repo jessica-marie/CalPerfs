@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <title>
+      CalPerfs Availability
+    </title>
+    <script>
+    	var temp=1
+    	var add_fields = function() {
+    		document.getElementById('wrapper').innerHTML += "<span>Date: <select name=value"+temp+"><option value =1>1</option><option value =2>2</option><option value =3>3</option><option value =4>4</option><option value =5>5</option><option value =6>6</option><option value =7>7</option><option value =8>8</option><option value =9>9</option><option value =10>10</option><option value =11>11</option><option value =12>12</option><option value =13>13</option><option value =14>14</option><option value =15>15</option><option value =16>16</option><option value =17>17</option><option value =18>18</option><option value =19>19</option><option value =20>20</option><option value =21>21</option><option value =22>22</option><option value =23>23</option><option value =24>24</option><option value =25>25</option><option value =26>26</option><option value =27>27</option><option value =28>28</option><option value =29>29</option><option value =30>30</option><option value =31>31</option></select></span><span>Time: Start:<select> <option value='6'>6:00 AM</option><option value='6.25'>6:15 AM</option><option value='6.5'>6:30 AM</option><option value='6.75'>6:45 AM</option><option value='7'>7:00 AM</option><option value='7.25'>7:15 AM</option><option value='7.5'>7:30 AM</option><option value='7.75'>7:45 AM</option>	<option value='8'>8:00 AM</option><option value='8.25'>8:15 AM</option>	<option value='8.5'>8:30 AM</option><option value='8.75'>8:45 AM</option>	<option value='9'>9:00 AM</option><option value='9.25'>9:15 AM</option>	<option value='9.5'>9:30 AM</option><option value='9.75'>9:45 AM</option>	<option value='10'>10:00 AM</option><option value='10.25'>10:15 AM</option><option value='10.5'>10:30 AM</option><option value='10.75'>10:45 AM</option><option value='11'>11:00 AM</option><option value='11.25'>11:15 AM</option><option value='11.5'>11:30 AM</option><option value='11.75'>11:45 AM</option><option value='12'>12:00 PM</option><option value='12.25'>12:15 PM</option><option value='12.5'>12:30 PM</option><option value='12.75'>12:45 PM</option><option value='13'>1:00 PM</option> <option value='13.25'>1:15 PM</option><option value='13.5'>1:30 PM</option><option value='13.75'>1:45 PM</option><option value='14'>2:00 PM</option><option value='14.25'>2:15 PM</option><option value='14.5'>2:30 PM</option><option value='14.75'>2:45 PM</option><option value='15'>3:00 PM</option><option value='15.25'>3:15 PM</option><option value='15.5'>3:30 PM</option><option value='15.75'>3:45 PM</option><option value='16'>4:00 PM</option><option value='16.25'>4:15 PM</option><option value='16.5'>4:30 PM</option><option value='16.75'>4:45 PM</option><option value='17'>5:00 PM</option><option value='17.25'>5:15 PM</option><option value='17.5'>5:30 PM</option><option value='17.75'>5:45 PM</option><option value='18'>6:00 PM</option><option value='18.25'>6:15 PM</option><option value='18.5'>6:30 PM</option><option value='18.75'>6:45 PM</option><option value='19'>7:00 PM</option><option value='19.25'>7:15 PM</option><option value='19.5'>7:30 PM</option><option value='19.75'>7:45 PM</option><option value='20'>8:00 PM</option><option value='20.25'>8:15 PM</option><option value='20.5'>8:30 PM</option><option value='20.75'>8:45 PM</option><option value='21'>9:00 PM</option><option value='21.25'>9:15 PM</option><option value='21.5'>9:30 PM</option><option value='21.75'>9:45 PM</option><option value='22'>10:00 PM</option><option value='22.25'>10:15 PM</option><option value='22.5'>10:30 PM</option><option value='22.75'>10:45 PM</option><option value='23'>11:00 PM</option><option value='23.25'>11:15 PM</option><option value='23.5'>11:30 PM</option><option value='23.75'>11:45 PM</option><option value='24'>12:00 AM</option></select></span><br>";       
+    		temp=temp+1;
+    		}
+    	var temp2=1
+    	var add_fields2 = function() {
+    		document.getElementById('wrapper2').innerHTML += "<span>Date: <select name=value"+temp2+"><option value =1>1</option><option value =2>2</option><option value =3>3</option><option value =4>4</option><option value =5>5</option><option value =6>6</option><option value =7>7</option><option value =8>8</option><option value =9>9</option><option value =10>10</option><option value =11>11</option><option value =12>12</option><option value =13>13</option><option value =14>14</option><option value =15>15</option><option value =16>16</option><option value =17>17</option><option value =18>18</option><option value =19>19</option><option value =20>20</option><option value =21>21</option><option value =22>22</option><option value =23>23</option><option value =24>24</option><option value =25>25</option><option value =26>26</option><option value =27>27</option><option value =28>28</option><option value =29>29</option><option value =30>30</option><option value =31>31</option></select></span> <span>Time: Start:<select> <option value='6'>6:00 AM</option><option value='6.25'>6:15 AM</option><option value='6.5'>6:30 AM</option><option value='6.75'>6:45 AM</option><option value='7'>7:00 AM</option><option value='7.25'>7:15 AM</option>	<option value='7.5'>7:30 AM</option><option value='7.75'>7:45 AM</option>	<option value='8'>8:00 AM</option><option value='8.25'>8:15 AM</option>	<option value='8.5'>8:30 AM</option><option value='8.75'>8:45 AM</option>	<option value='9'>9:00 AM</option><option value='9.25'>9:15 AM</option>	<option value='9.5'>9:30 AM</option><option value='9.75'>9:45 AM</option>	<option value='10'>10:00 AM</option><option value='10.25'>10:15 AM</option><option value='10.5'>10:30 AM</option><option value='10.75'>10:45 AM</option><option value='11'>11:00 AM</option><option value='11.25'>11:15 AM</option><option value='11.5'>11:30 AM</option><option value='11.75'>11:45 AM</option><option value='12'>12:00 PM</option><option value='12.25'>12:15 PM</option><option value='12.5'>12:30 PM</option><option value='12.75'>12:45 PM</option><option value='13'>1:00 PM</option> <option value='13.25'>1:15 PM</option><option value='13.5'>1:30 PM</option><option value='13.75'>1:45 PM</option><option value='14'>2:00 PM</option><option value='14.25'>2:15 PM</option><option value='14.5'>2:30 PM</option><option value='14.75'>2:45 PM</option><option value='15'>3:00 PM</option><option value='15.25'>3:15 PM</option><option value='15.5'>3:30 PM</option><option value='15.75'>3:45 PM</option><option value='16'>4:00 PM</option><option value='16.25'>4:15 PM</option><option value='16.5'>4:30 PM</option><option value='16.75'>4:45 PM</option><option value='17'>5:00 PM</option><option value='17.25'>5:15 PM</option><option value='17.5'>5:30 PM</option><option value='17.75'>5:45 PM</option><option value='18'>6:00 PM</option><option value='18.25'>6:15 PM</option><option value='18.5'>6:30 PM</option><option value='18.75'>6:45 PM</option><option value='19'>7:00 PM</option><option value='19.25'>7:15 PM</option><option value='19.5'>7:30 PM</option><option value='19.75'>7:45 PM</option><option value='20'>8:00 PM</option><option value='20.25'>8:15 PM</option><option value='20.5'>8:30 PM</option><option value='20.75'>8:45 PM</option><option value='21'>9:00 PM</option><option value='21.25'>9:15 PM</option><option value='21.5'>9:30 PM</option><option value='21.75'>9:45 PM</option><option value='22'>10:00 PM</option><option value='22.25'>10:15 PM</option><option value='22.5'>10:30 PM</option><option value='22.75'>10:45 PM</option><option value='23'>11:00 PM</option><option value='23.25'>11:15 PM</option><option value='23.5'>11:30 PM</option><option value='23.75'>11:45 PM</option><option value='24'>12:00 AM</option></select></span><br>";   
+    		temp2=temp2+1;
+    		}
+    	var mon=1
+    	var add_monday = function() {
+    		document.getElementById('monday').innerHTML += "<span>Time: Start:<select name=value"+mon+"> <option value='6'>6:00 AM</option><option value='6.25'>6:15 AM</option><option value='6.5'>6:30 AM</option><option value='6.75'>6:45 AM</option><option value='7'>7:00 AM</option><option value='7.25'>7:15 AM</option>	<option value='7.5'>7:30 AM</option><option value='7.75'>7:45 AM</option>	<option value='8'>8:00 AM</option><option value='8.25'>8:15 AM</option>	<option value='8.5'>8:30 AM</option><option value='8.75'>8:45 AM</option>	<option value='9'>9:00 AM</option><option value='9.25'>9:15 AM</option>	<option value='9.5'>9:30 AM</option><option value='9.75'>9:45 AM</option>	<option value='10'>10:00 AM</option><option value='10.25'>10:15 AM</option><option value='10.5'>10:30 AM</option><option value='10.75'>10:45 AM</option><option value='11'>11:00 AM</option><option value='11.25'>11:15 AM</option><option value='11.5'>11:30 AM</option><option value='11.75'>11:45 AM</option><option value='12'>12:00 PM</option><option value='12.25'>12:15 PM</option><option value='12.5'>12:30 PM</option><option value='12.75'>12:45 PM</option><option value='13'>1:00 PM</option> <option value='13.25'>1:15 PM</option><option value='13.5'>1:30 PM</option><option value='13.75'>1:45 PM</option><option value='14'>2:00 PM</option><option value='14.25'>2:15 PM</option><option value='14.5'>2:30 PM</option><option value='14.75'>2:45 PM</option><option value='15'>3:00 PM</option><option value='15.25'>3:15 PM</option><option value='15.5'>3:30 PM</option><option value='15.75'>3:45 PM</option><option value='16'>4:00 PM</option><option value='16.25'>4:15 PM</option><option value='16.5'>4:30 PM</option><option value='16.75'>4:45 PM</option><option value='17'>5:00 PM</option><option value='17.25'>5:15 PM</option><option value='17.5'>5:30 PM</option><option value='17.75'>5:45 PM</option><option value='18'>6:00 PM</option><option value='18.25'>6:15 PM</option><option value='18.5'>6:30 PM</option><option value='18.75'>6:45 PM</option><option value='19'>7:00 PM</option><option value='19.25'>7:15 PM</option><option value='19.5'>7:30 PM</option><option value='19.75'>7:45 PM</option><option value='20'>8:00 PM</option><option value='20.25'>8:15 PM</option><option value='20.5'>8:30 PM</option><option value='20.75'>8:45 PM</option><option value='21'>9:00 PM</option><option value='21.25'>9:15 PM</option><option value='21.5'>9:30 PM</option><option value='21.75'>9:45 PM</option><option value='22'>10:00 PM</option><option value='22.25'>10:15 PM</option><option value='22.5'>10:30 PM</option><option value='22.75'>10:45 PM</option><option value='23'>11:00 PM</option><option value='23.25'>11:15 PM</option><option value='23.5'>11:30 PM</option><option value='23.75'>11:45 PM</option><option value='24'>12:00 AM</option></select></span><br>';
+    		mon=mon+1;
+    		}
+    	var tues=1
+    	var add_tuesday = function() {
+    		document.getElementById('tuesday').innerHTML += "<span>Time: Start:<select name=value"+tues+"> <option value='6'>6:00 AM</option><option value='6.25'>6:15 AM</option><option value='6.5'>6:30 AM</option><option value='6.75'>6:45 AM</option><option value='7'>7:00 AM</option><option value='7.25'>7:15 AM</option>	<option value='7.5'>7:30 AM</option><option value='7.75'>7:45 AM</option>	<option value='8'>8:00 AM</option><option value='8.25'>8:15 AM</option>	<option value='8.5'>8:30 AM</option><option value='8.75'>8:45 AM</option>	<option value='9'>9:00 AM</option><option value='9.25'>9:15 AM</option>	<option value='9.5'>9:30 AM</option><option value='9.75'>9:45 AM</option>	<option value='10'>10:00 AM</option><option value='10.25'>10:15 AM</option><option value='10.5'>10:30 AM</option><option value='10.75'>10:45 AM</option><option value='11'>11:00 AM</option><option value='11.25'>11:15 AM</option><option value='11.5'>11:30 AM</option><option value='11.75'>11:45 AM</option><option value='12'>12:00 PM</option><option value='12.25'>12:15 PM</option><option value='12.5'>12:30 PM</option><option value='12.75'>12:45 PM</option><option value='13'>1:00 PM</option> <option value='13.25'>1:15 PM</option><option value='13.5'>1:30 PM</option><option value='13.75'>1:45 PM</option><option value='14'>2:00 PM</option><option value='14.25'>2:15 PM</option><option value='14.5'>2:30 PM</option><option value='14.75'>2:45 PM</option><option value='15'>3:00 PM</option><option value='15.25'>3:15 PM</option><option value='15.5'>3:30 PM</option><option value='15.75'>3:45 PM</option><option value='16'>4:00 PM</option><option value='16.25'>4:15 PM</option><option value='16.5'>4:30 PM</option><option value='16.75'>4:45 PM</option><option value='17'>5:00 PM</option><option value='17.25'>5:15 PM</option><option value='17.5'>5:30 PM</option><option value='17.75'>5:45 PM</option><option value='18'>6:00 PM</option><option value='18.25'>6:15 PM</option><option value='18.5'>6:30 PM</option><option value='18.75'>6:45 PM</option><option value='19'>7:00 PM</option><option value='19.25'>7:15 PM</option><option value='19.5'>7:30 PM</option><option value='19.75'>7:45 PM</option><option value='20'>8:00 PM</option><option value='20.25'>8:15 PM</option><option value='20.5'>8:30 PM</option><option value='20.75'>8:45 PM</option><option value='21'>9:00 PM</option><option value='21.25'>9:15 PM</option><option value='21.5'>9:30 PM</option><option value='21.75'>9:45 PM</option><option value='22'>10:00 PM</option><option value='22.25'>10:15 PM</option><option value='22.5'>10:30 PM</option><option value='22.75'>10:45 PM</option><option value='23'>11:00 PM</option><option value='23.25'>11:15 PM</option><option value='23.5'>11:30 PM</option><option value='23.75'>11:45 PM</option><option value='24'>12:00 AM</option></select></span><br>';
+    		tues=tues+1;
+    		}
+    	var wed=1
+    	var add_wednesday = function() {
+    		document.getElementById('wednesday').innerHTML += "<span>Time: Start:<select name=value"+wed+"> <option value='6'>6:00 AM</option><option value='6.25'>6:15 AM</option><option value='6.5'>6:30 AM</option><option value='6.75'>6:45 AM</option><option value='7'>7:00 AM</option><option value='7.25'>7:15 AM</option>	<option value='7.5'>7:30 AM</option><option value='7.75'>7:45 AM</option>	<option value='8'>8:00 AM</option><option value='8.25'>8:15 AM</option>	<option value='8.5'>8:30 AM</option><option value='8.75'>8:45 AM</option>	<option value='9'>9:00 AM</option><option value='9.25'>9:15 AM</option>	<option value='9.5'>9:30 AM</option><option value='9.75'>9:45 AM</option>	<option value='10'>10:00 AM</option><option value='10.25'>10:15 AM</option><option value='10.5'>10:30 AM</option><option value='10.75'>10:45 AM</option><option value='11'>11:00 AM</option><option value='11.25'>11:15 AM</option><option value='11.5'>11:30 AM</option><option value='11.75'>11:45 AM</option><option value='12'>12:00 PM</option><option value='12.25'>12:15 PM</option><option value='12.5'>12:30 PM</option><option value='12.75'>12:45 PM</option><option value='13'>1:00 PM</option> <option value='13.25'>1:15 PM</option><option value='13.5'>1:30 PM</option><option value='13.75'>1:45 PM</option><option value='14'>2:00 PM</option><option value='14.25'>2:15 PM</option><option value='14.5'>2:30 PM</option><option value='14.75'>2:45 PM</option><option value='15'>3:00 PM</option><option value='15.25'>3:15 PM</option><option value='15.5'>3:30 PM</option><option value='15.75'>3:45 PM</option><option value='16'>4:00 PM</option><option value='16.25'>4:15 PM</option><option value='16.5'>4:30 PM</option><option value='16.75'>4:45 PM</option><option value='17'>5:00 PM</option><option value='17.25'>5:15 PM</option><option value='17.5'>5:30 PM</option><option value='17.75'>5:45 PM</option><option value='18'>6:00 PM</option><option value='18.25'>6:15 PM</option><option value='18.5'>6:30 PM</option><option value='18.75'>6:45 PM</option><option value='19'>7:00 PM</option><option value='19.25'>7:15 PM</option><option value='19.5'>7:30 PM</option><option value='19.75'>7:45 PM</option><option value='20'>8:00 PM</option><option value='20.25'>8:15 PM</option><option value='20.5'>8:30 PM</option><option value='20.75'>8:45 PM</option><option value='21'>9:00 PM</option><option value='21.25'>9:15 PM</option><option value='21.5'>9:30 PM</option><option value='21.75'>9:45 PM</option><option value='22'>10:00 PM</option><option value='22.25'>10:15 PM</option><option value='22.5'>10:30 PM</option><option value='22.75'>10:45 PM</option><option value='23'>11:00 PM</option><option value='23.25'>11:15 PM</option><option value='23.5'>11:30 PM</option><option value='23.75'>11:45 PM</option><option value='24'>12:00 AM</option></select></span><br>';
+    		wed=wed+1;
+    		}
+    	var thurs=1
+    	var add_thursday = function() {
+    		document.getElementById('thursday').innerHTML += "<span>Time: Start:<select name=value"+thurs+"> <option value='6'>6:00 AM</option><option value='6.25'>6:15 AM</option><option value='6.5'>6:30 AM</option><option value='6.75'>6:45 AM</option><option value='7'>7:00 AM</option><option value='7.25'>7:15 AM</option>	<option value='7.5'>7:30 AM</option><option value='7.75'>7:45 AM</option>	<option value='8'>8:00 AM</option><option value='8.25'>8:15 AM</option>	<option value='8.5'>8:30 AM</option><option value='8.75'>8:45 AM</option>	<option value='9'>9:00 AM</option><option value='9.25'>9:15 AM</option>	<option value='9.5'>9:30 AM</option><option value='9.75'>9:45 AM</option>	<option value='10'>10:00 AM</option><option value='10.25'>10:15 AM</option><option value='10.5'>10:30 AM</option><option value='10.75'>10:45 AM</option><option value='11'>11:00 AM</option><option value='11.25'>11:15 AM</option><option value='11.5'>11:30 AM</option><option value='11.75'>11:45 AM</option><option value='12'>12:00 PM</option><option value='12.25'>12:15 PM</option><option value='12.5'>12:30 PM</option><option value='12.75'>12:45 PM</option><option value='13'>1:00 PM</option> <option value='13.25'>1:15 PM</option><option value='13.5'>1:30 PM</option><option value='13.75'>1:45 PM</option><option value='14'>2:00 PM</option><option value='14.25'>2:15 PM</option><option value='14.5'>2:30 PM</option><option value='14.75'>2:45 PM</option><option value='15'>3:00 PM</option><option value='15.25'>3:15 PM</option><option value='15.5'>3:30 PM</option><option value='15.75'>3:45 PM</option><option value='16'>4:00 PM</option><option value='16.25'>4:15 PM</option><option value='16.5'>4:30 PM</option><option value='16.75'>4:45 PM</option><option value='17'>5:00 PM</option><option value='17.25'>5:15 PM</option><option value='17.5'>5:30 PM</option><option value='17.75'>5:45 PM</option><option value='18'>6:00 PM</option><option value='18.25'>6:15 PM</option><option value='18.5'>6:30 PM</option><option value='18.75'>6:45 PM</option><option value='19'>7:00 PM</option><option value='19.25'>7:15 PM</option><option value='19.5'>7:30 PM</option><option value='19.75'>7:45 PM</option><option value='20'>8:00 PM</option><option value='20.25'>8:15 PM</option><option value='20.5'>8:30 PM</option><option value='20.75'>8:45 PM</option><option value='21'>9:00 PM</option><option value='21.25'>9:15 PM</option><option value='21.5'>9:30 PM</option><option value='21.75'>9:45 PM</option><option value='22'>10:00 PM</option><option value='22.25'>10:15 PM</option><option value='22.5'>10:30 PM</option><option value='22.75'>10:45 PM</option><option value='23'>11:00 PM</option><option value='23.25'>11:15 PM</option><option value='23.5'>11:30 PM</option><option value='23.75'>11:45 PM</option><option value='24'>12:00 AM</option></select></span><br>';
+    		thurs=thurs+1;
+    		}
+    	var fri=1
+    	var add_friday = function() {
+    		document.getElementById('friday').innerHTML += "<span>Time: Start:<select name=value"+fri+"> <option value='6'>6:00 AM</option><option value='6.25'>6:15 AM</option><option value='6.5'>6:30 AM</option><option value='6.75'>6:45 AM</option><option value='7'>7:00 AM</option><option value='7.25'>7:15 AM</option>	<option value='7.5'>7:30 AM</option><option value='7.75'>7:45 AM</option>	<option value='8'>8:00 AM</option><option value='8.25'>8:15 AM</option>	<option value='8.5'>8:30 AM</option><option value='8.75'>8:45 AM</option>	<option value='9'>9:00 AM</option><option value='9.25'>9:15 AM</option>	<option value='9.5'>9:30 AM</option><option value='9.75'>9:45 AM</option>	<option value='10'>10:00 AM</option><option value='10.25'>10:15 AM</option><option value='10.5'>10:30 AM</option><option value='10.75'>10:45 AM</option><option value='11'>11:00 AM</option><option value='11.25'>11:15 AM</option><option value='11.5'>11:30 AM</option><option value='11.75'>11:45 AM</option><option value='12'>12:00 PM</option><option value='12.25'>12:15 PM</option><option value='12.5'>12:30 PM</option><option value='12.75'>12:45 PM</option><option value='13'>1:00 PM</option> <option value='13.25'>1:15 PM</option><option value='13.5'>1:30 PM</option><option value='13.75'>1:45 PM</option><option value='14'>2:00 PM</option><option value='14.25'>2:15 PM</option><option value='14.5'>2:30 PM</option><option value='14.75'>2:45 PM</option><option value='15'>3:00 PM</option><option value='15.25'>3:15 PM</option><option value='15.5'>3:30 PM</option><option value='15.75'>3:45 PM</option><option value='16'>4:00 PM</option><option value='16.25'>4:15 PM</option><option value='16.5'>4:30 PM</option><option value='16.75'>4:45 PM</option><option value='17'>5:00 PM</option><option value='17.25'>5:15 PM</option><option value='17.5'>5:30 PM</option><option value='17.75'>5:45 PM</option><option value='18'>6:00 PM</option><option value='18.25'>6:15 PM</option><option value='18.5'>6:30 PM</option><option value='18.75'>6:45 PM</option><option value='19'>7:00 PM</option><option value='19.25'>7:15 PM</option><option value='19.5'>7:30 PM</option><option value='19.75'>7:45 PM</option><option value='20'>8:00 PM</option><option value='20.25'>8:15 PM</option><option value='20.5'>8:30 PM</option><option value='20.75'>8:45 PM</option><option value='21'>9:00 PM</option><option value='21.25'>9:15 PM</option><option value='21.5'>9:30 PM</option><option value='21.75'>9:45 PM</option><option value='22'>10:00 PM</option><option value='22.25'>10:15 PM</option><option value='22.5'>10:30 PM</option><option value='22.75'>10:45 PM</option><option value='23'>11:00 PM</option><option value='23.25'>11:15 PM</option><option value='23.5'>11:30 PM</option><option value='23.75'>11:45 PM</option><option value='24'>12:00 AM</option></select></span><br>';
+    		fri=fri+1;
+    		}
+    	var sat=1
+    	var add_saturday = function() {
+    		document.getElementById('saturday').innerHTML += "<span>Time: Start:<select name=value"+sat+"> <option value='6'>6:00 AM</option><option value='6.25'>6:15 AM</option><option value='6.5'>6:30 AM</option><option value='6.75'>6:45 AM</option><option value='7'>7:00 AM</option><option value='7.25'>7:15 AM</option>	<option value='7.5'>7:30 AM</option><option value='7.75'>7:45 AM</option>	<option value='8'>8:00 AM</option><option value='8.25'>8:15 AM</option>	<option value='8.5'>8:30 AM</option><option value='8.75'>8:45 AM</option>	<option value='9'>9:00 AM</option><option value='9.25'>9:15 AM</option>	<option value='9.5'>9:30 AM</option><option value='9.75'>9:45 AM</option>	<option value='10'>10:00 AM</option><option value='10.25'>10:15 AM</option><option value='10.5'>10:30 AM</option><option value='10.75'>10:45 AM</option><option value='11'>11:00 AM</option><option value='11.25'>11:15 AM</option><option value='11.5'>11:30 AM</option><option value='11.75'>11:45 AM</option><option value='12'>12:00 PM</option><option value='12.25'>12:15 PM</option><option value='12.5'>12:30 PM</option><option value='12.75'>12:45 PM</option><option value='13'>1:00 PM</option> <option value='13.25'>1:15 PM</option><option value='13.5'>1:30 PM</option><option value='13.75'>1:45 PM</option><option value='14'>2:00 PM</option><option value='14.25'>2:15 PM</option><option value='14.5'>2:30 PM</option><option value='14.75'>2:45 PM</option><option value='15'>3:00 PM</option><option value='15.25'>3:15 PM</option><option value='15.5'>3:30 PM</option><option value='15.75'>3:45 PM</option><option value='16'>4:00 PM</option><option value='16.25'>4:15 PM</option><option value='16.5'>4:30 PM</option><option value='16.75'>4:45 PM</option><option value='17'>5:00 PM</option><option value='17.25'>5:15 PM</option><option value='17.5'>5:30 PM</option><option value='17.75'>5:45 PM</option><option value='18'>6:00 PM</option><option value='18.25'>6:15 PM</option><option value='18.5'>6:30 PM</option><option value='18.75'>6:45 PM</option><option value='19'>7:00 PM</option><option value='19.25'>7:15 PM</option><option value='19.5'>7:30 PM</option><option value='19.75'>7:45 PM</option><option value='20'>8:00 PM</option><option value='20.25'>8:15 PM</option><option value='20.5'>8:30 PM</option><option value='20.75'>8:45 PM</option><option value='21'>9:00 PM</option><option value='21.25'>9:15 PM</option><option value='21.5'>9:30 PM</option><option value='21.75'>9:45 PM</option><option value='22'>10:00 PM</option><option value='22.25'>10:15 PM</option><option value='22.5'>10:30 PM</option><option value='22.75'>10:45 PM</option><option value='23'>11:00 PM</option><option value='23.25'>11:15 PM</option><option value='23.5'>11:30 PM</option><option value='23.75'>11:45 PM</option><option value='24'>12:00 AM</option></select></span><br>';
+    		sat=sat+1;
+    		}
+    	var sun=1
+    	var add_sunday = function() {
+    		document.getElementById('sunday').innerHTML += "<span>Time: Start:<select name=value"+sun+"> <option value='6'>6:00 AM</option><option value='6.25'>6:15 AM</option><option value='6.5'>6:30 AM</option><option value='6.75'>6:45 AM</option><option value='7'>7:00 AM</option><option value='7.25'>7:15 AM</option>	<option value='7.5'>7:30 AM</option><option value='7.75'>7:45 AM</option>	<option value='8'>8:00 AM</option><option value='8.25'>8:15 AM</option>	<option value='8.5'>8:30 AM</option><option value='8.75'>8:45 AM</option>	<option value='9'>9:00 AM</option><option value='9.25'>9:15 AM</option>	<option value='9.5'>9:30 AM</option><option value='9.75'>9:45 AM</option>	<option value='10'>10:00 AM</option><option value='10.25'>10:15 AM</option><option value='10.5'>10:30 AM</option><option value='10.75'>10:45 AM</option><option value='11'>11:00 AM</option><option value='11.25'>11:15 AM</option><option value='11.5'>11:30 AM</option><option value='11.75'>11:45 AM</option><option value='12'>12:00 PM</option><option value='12.25'>12:15 PM</option><option value='12.5'>12:30 PM</option><option value='12.75'>12:45 PM</option><option value='13'>1:00 PM</option> <option value='13.25'>1:15 PM</option><option value='13.5'>1:30 PM</option><option value='13.75'>1:45 PM</option><option value='14'>2:00 PM</option><option value='14.25'>2:15 PM</option><option value='14.5'>2:30 PM</option><option value='14.75'>2:45 PM</option><option value='15'>3:00 PM</option><option value='15.25'>3:15 PM</option><option value='15.5'>3:30 PM</option><option value='15.75'>3:45 PM</option><option value='16'>4:00 PM</option><option value='16.25'>4:15 PM</option><option value='16.5'>4:30 PM</option><option value='16.75'>4:45 PM</option><option value='17'>5:00 PM</option><option value='17.25'>5:15 PM</option><option value='17.5'>5:30 PM</option><option value='17.75'>5:45 PM</option><option value='18'>6:00 PM</option><option value='18.25'>6:15 PM</option><option value='18.5'>6:30 PM</option><option value='18.75'>6:45 PM</option><option value='19'>7:00 PM</option><option value='19.25'>7:15 PM</option><option value='19.5'>7:30 PM</option><option value='19.75'>7:45 PM</option><option value='20'>8:00 PM</option><option value='20.25'>8:15 PM</option><option value='20.5'>8:30 PM</option><option value='20.75'>8:45 PM</option><option value='21'>9:00 PM</option><option value='21.25'>9:15 PM</option><option value='21.5'>9:30 PM</option><option value='21.75'>9:45 PM</option><option value='22'>10:00 PM</option><option value='22.25'>10:15 PM</option><option value='22.5'>10:30 PM</option><option value='22.75'>10:45 PM</option><option value='23'>11:00 PM</option><option value='23.25'>11:15 PM</option><option value='23.5'>11:30 PM</option><option value='23.75'>11:45 PM</option><option value='24'>12:00 AM</option></select></span><br>';
+    		sun=sun+1;
+    		}
+
+    </script>
+    <style>
+     .a{border: 4px black solid;
+        width:200px;}
+     #e{float:right;}
+    </style>
+  </head>
+  <body>
+    <h1>Submit My Availabilities</h1>
+    <p id='e'>{{email}}
+    </p>
+    <form action="/availability" method="post">
+    	Name: <input type="text" name="name"><br>
+    	Please Select the month and year for the availability you are submitting
+    	<select name= 'month'>
+    		<option value='1'>January</option>
+    		<option value='2'>February</option>
+    		<option value='3'>March</option>
+    		<option value='4'>April</option>
+    		<option value='5'>May</option>
+    		<option value='6'>June</option>
+    		<option value='7'>July</option>
+    		<option value='8'>August</option>
+    		<option value='9'>September</option>
+    		<option value='10'>October</option>
+    		<option value='11'>November</option>
+    		<option value='12'>December</option>
+    	</select>
+    	<select name='chosenYear'>
+    		<option value={{yearOne}}>{{year}}</option>
+    		<option value={{yearTwo}}>{{year+1}}</option>
+    	</select>
+    	<br>
+    	Please enter your general weekly availability<br>
+    	Monday<br><div class="content" id="monday">
+    		Time: 
+    		<input type="button" id="more_fields" onclick="add_monday();" value="Add Time" /><br>
+    		</div>
+    	Tuesday<br><div class="content" id="tuesday">
+    		Time: 
+    		<input type="button" id="more_fields" onclick="add_tuesday();" value="Add Time" /><br>
+    		</div>
+    	Wednesday<br><div class="content" id="wednesday">
+    		Time: 
+    		<input type="button" id="more_fields" onclick="add_wednesday();" value="Add Time" /><br>
+    		</div>
+    	Thursday<br><div class="content" id="thursday">
+    		Time: 
+    		<input type="button" id="more_fields" onclick="add_thursday();" value="Add Time" /><br>
+    		</div>
+    	Friday<br><div class="content" id="friday">
+    		Time: 
+    		<input type="button" id="more_fields" onclick="add_friday();" value="Add Time" /><br>
+    		</div>
+    	Saturday<br><div class="content" id="saturday">
+    		Time: 
+    		<input type="button" id="more_fields" onclick="add_saturday();" value="Add Time" /><br>
+    		</div>
+    	Sunday<br><div class="content" id="sunday">
+    		Time: 
+    		<input type="button" id="more_fields" onclick="add_sunday();" value="Add Time" /><br>
+    		</div>
+    	<br>
+    	Please select any days this month that you are not available at all<br>
+    	Please ignore any days that are not a part of the month
+    	<table> 
+    	<tr>
+    	<td><input type="checkbox" name="not" value="1">1</td>
+    	<td><input type="checkbox" name="not" value="2">2</td> 
+    	<td><input type="checkbox" name="not" value="3">3</td> 
+    	<td><input type="checkbox" name="not" value="4">4</td> 
+    	<td><input type="checkbox" name="not" value="5">5</td>
+    	<td><input type="checkbox" name="not" value="6">6</td>
+    	</tr>
+    	<tr>
+    	<td><input type="checkbox" name="not" value="7">7</td>
+    	<td><input type="checkbox" name="not" value="8">8</td> 
+    	<td><input type="checkbox" name="not" value="9">9</td> 
+    	<td><input type="checkbox" name="not" value="10">10</td> 
+    	<td><input type="checkbox" name="not" value="11">11</td>
+    	<td><input type="checkbox" name="not" value="12">12</td>
+    	</tr>
+    	<tr>
+    	<td><input type="checkbox" name="not" value="13">13</td>
+    	<td><input type="checkbox" name="not" value="14">14</td> 
+    	<td><input type="checkbox" name="not" value="15">15</td> 
+    	<td><input type="checkbox" name="not" value="16">16</td> 
+    	<td><input type="checkbox" name="not" value="17">17</td>
+    	<td><input type="checkbox" name="not" value="18">18</td>
+    	</tr>
+    	<tr>
+    	<td><input type="checkbox" name="not" value="19">19</td>
+    	<td><input type="checkbox" name="not" value="20">20</td> 
+    	<td><input type="checkbox" name="not" value="21">21</td> 
+    	<td><input type="checkbox" name="not" value="22">22</td> 
+    	<td><input type="checkbox" name="not" value="23">23</td>
+    	<td><input type="checkbox" name="not" value="24">24</td>
+    	</tr>
+    	<tr>
+    	<td><input type="checkbox" name="not" value="25">25</td>
+    	<td><input type="checkbox" name="not" value="26">26</td> 
+    	<td><input type="checkbox" name="not" value="27">27</td> 
+    	<td><input type="checkbox" name="not" value="28">28</td> 
+    	<td><input type="checkbox" name="not" value="29">29</td>
+    	<td><input type="checkbox" name="not" value="30">30</td>
+    	</tr>
+    	<tr>
+    	<td><input type="checkbox" name="not" value="31">31</td>
+    	</tr>
+    	</table>
+    	Please include any time slots were you are not available
+    	<input type="button" id="more_fields" onclick="add_fields();" value="Add Time" />
+    		<div class="content" id="wrapper">
+    		</div>
+    	Please include any time slots were you are additionally available
+    	<input type="button" id="more_fields" onclick="add_fields2();" value="Add Time" />
+    		<div class="content" id="wrapper2">
+    		</div>
+    	<input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
